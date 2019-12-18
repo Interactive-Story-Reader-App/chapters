@@ -3,18 +3,21 @@ package turntabl.io.stories.models;
 import java.util.Arrays;
 
 public class Chapter {
-    private String chapter_id;
+    private String _id;
+    private String _rev;
     private String story_id;
     private String chapter_title;
     private String chapter_content;
-    private Integer[] candidates;
+    private String[] candidates;
     private Choice[] choices;
 
     public Chapter() {
+
     }
 
-    public Chapter(String chapter_id, String story_id, String chapter_title, String chapter_content, Integer[] candidates, Choice[] choices) {
-        this.chapter_id = chapter_id;
+    public Chapter(String _id, String _rev, String story_id, String chapter_title, String chapter_content, String[] candidates, Choice[] choices) {
+        this._id = _id;
+        this._rev = _rev;
         this.story_id = story_id;
         this.chapter_title = chapter_title;
         this.chapter_content = chapter_content;
@@ -22,12 +25,20 @@ public class Chapter {
         this.choices = choices;
     }
 
-    public String getChapter_id() {
-        return chapter_id;
+    public String get_id() {
+        return _id;
     }
 
-    public void setChapter_id(String chapter_id) {
-        this.chapter_id = chapter_id;
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public String get_rev() {
+        return _rev;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
     }
 
     public String getStory_id() {
@@ -54,11 +65,11 @@ public class Chapter {
         this.chapter_content = chapter_content;
     }
 
-    public Integer[] getCandidates() {
+    public String[] getCandidates() {
         return candidates;
     }
 
-    public void setCandidates(Integer[] candidates) {
+    public void setCandidates(String[] candidates) {
         this.candidates = candidates;
     }
 
@@ -73,11 +84,10 @@ public class Chapter {
     @Override
     public String toString() {
         return "Chapter{" +
-                "chapter_id='" + chapter_id + '\'' +
-                ", story_id='" + story_id + '\'' +
-                ", chapter_title='" + chapter_title + '\'' +
-                ", chapter_content='" + chapter_content + '\'' +
-                ", candidates=" + Arrays.toString(candidates) +
-                '}';
+            ", story_id='" + story_id + '\'' +
+            ", chapter_title='" + chapter_title + '\'' +
+            ", chapter_content='" + chapter_content + '\'' +
+            ", candidates=" + Arrays.toString(candidates) +
+            '}';
     }
 }
