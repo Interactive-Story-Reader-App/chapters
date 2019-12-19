@@ -26,14 +26,13 @@ public class Processing {
                 path.add(a);
             }
         }
+        System.out.println("====================================");
         System.out.println(path);
 
-        List<String> listDistinct = path.stream().distinct().collect(Collectors.toList());
-        Collections.reverse(listDistinct);
-        Collections.reverse(listDistinct);
-        System.out.println(listDistinct);
+        List<String> actualPath = path.stream().distinct().collect(Collectors.toList());
+        System.out.println(actualPath);
 
-        return  listDistinct;
+        return  actualPath;
     }
 
 }
